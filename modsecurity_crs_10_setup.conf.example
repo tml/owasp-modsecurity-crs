@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------
-# Core ModSecurity Rule Set ver.2.2.7
+# Core ModSecurity Rule Set ver.2.2.8
 # Copyright (C) 2006-2012 Trustwave All rights reserved.
 #
 # The OWASP ModSecurity Core Rule Set is distributed under 
@@ -36,7 +36,7 @@
 #
 # Ref: https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual#wiki-SecComponentSignature 
 #
-SecComponentSignature "OWASP_CRS/2.2.7"
+SecComponentSignature "OWASP_CRS/2.2.8"
 
 
 #
@@ -326,7 +326,7 @@ SecAction \
   "id:'900014', \
   phase:1, \
   t:none, \
-  setvar:'tx.brute_force_protected_urls=/login.jsp /partner_login.php', \
+  setvar:'tx.brute_force_protected_urls=#/login.jsp# #/partner_login.php#', \
   setvar:'tx.brute_force_burst_time_slice=60', \
   setvar:'tx.brute_force_counter_threshold=10', \
   setvar:'tx.brute_force_block_timeout=300', \

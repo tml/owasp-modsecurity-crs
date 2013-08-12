@@ -26,7 +26,7 @@ res = 0
 range = Range.new(*File.read('id-range').rstrip.split('-').map(&:to_i))
 
 # open all the rule files
-Dir.chdir("../")
+Dir.chdir("../../")
 Dir["**/*.conf"].each do |rulefile|
   # read the content
   content = File.read(rulefile)
